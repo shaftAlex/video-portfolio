@@ -1,17 +1,29 @@
-body {
-    font-family: Arial, sans-serif;
+body, 
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #0D0D0D;
+    color: #fff;
 }
 
 .portfolio {
+    max-width: 100%;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    grid-row-gap: 25px;
+    padding-top: 25px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 75px
 }
 
 .video-container {
     position: relative;
     overflow: hidden;
+    margin-left: 25px;
     padding-bottom: 56.25%; /* 16:9 aspect ratio for the video */
 }
 
@@ -24,6 +36,84 @@ iframe {
 }
 
 .text-box {
-    background-color: #f2f2f2;
-    padding: 10px;
+    padding: 4px 16px;
+    background-color: #121212;
+    margin-right: 25px;
+}
+
+.text-box h3 {
+    margin: 0;
+    padding: 4px 0;
+    font-weight: 600;
+    font-size: 22px;
+}
+.text-box p {
+    margin: 0;
+    padding: 4px 0;
+    font-weight: 200;
+    font-size: 16px;
+}
+.text-box h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #868686;
+}
+
+@media screen and (max-width: 2200px) {
+    /* For screens with a maximum width of 600px (adjust as needed) */
+    .portfolio {
+        grid-template-columns: repeat(2, 1fr); /* Single video per row on smaller screens */
+    }
+}
+
+.banner {
+    background-color: #141414; /* Background color of the banner */
+    color: #fff;           /* Text color */
+    text-align: center;    /* Center-align the text */
+    padding: 20px 125px;       /* Add top and bottom padding */
+}
+
+.banner h1 {
+    font-family: 'Archivo Black', sans-serif;
+    margin: 0;            /* Remove margin for the heading */
+    padding: 0;
+    font-size: 44px;      /* Adjust font size as needed */
+}
+
+.banner nav ul {
+    font-weight: 600;
+    font-size: 22px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.banner nav ul li {
+    display: inline;
+    margin-right: 0;   /* Add space between social links */
+}
+
+.banner nav ul li:last-child {
+    margin-right: 0;      /* Remove margin for the last link */
+}
+
+.banner nav ul li a {
+    text-decoration: none;
+    color: #fff;          /* Link color */
+}
+
+/* CSS for the title section */
+.portfolio-title {
+    background-color: #1A1A1A; /* Background color for the title section */
+    color: #fff;           /* Text color */
+    text-align: left;    /* Center-align the text */
+    padding: 20px 145px;       /* Add top and bottom padding */
+}
+
+.portfolio-title h2 {
+    margin: 0;             /* Remove margin for the title */
+    font-size: 24px;       /* Adjust font size as needed */
+    font-weight: 600;
 }
